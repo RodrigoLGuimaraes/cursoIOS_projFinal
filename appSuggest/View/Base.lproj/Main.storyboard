@@ -4,7 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,14 +22,14 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="appCell" rowHeight="235" id="4jV-xr-H37">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="appCell" rowHeight="235" id="4jV-xr-H37" customClass="AppTableViewCell" customModule="appSuggest" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="235"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4jV-xr-H37" id="3Ah-XG-Us6">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="234.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="soda_dungeon" translatesAutoresizingMaskIntoConstraints="NO" id="mNt-rt-QMW">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="mNt-rt-QMW">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="234.5"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="psZ-Ag-17f">
@@ -104,6 +104,12 @@
                                                 <constraint firstItem="8yw-nW-szt" firstAttribute="centerX" secondItem="psZ-Ag-17f" secondAttribute="centerX" id="tJj-YA-FNS"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imagemBG" destination="mNt-rt-QMW" id="NXI-XJ-8Mr"/>
+                                            <outlet property="name" destination="8yw-nW-szt" id="Sfi-Aq-4sz"/>
+                                            <outlet property="preco" destination="rHc-63-yKU" id="xKN-MT-gQb"/>
+                                            <outlet property="stackEstrelas" destination="s0x-LJ-7ZB" id="oD4-6P-c0O"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -127,7 +133,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="soda_dungeon" width="920" height="524"/>
         <image name="star" width="2000" height="1902"/>
     </resources>
 </document>
